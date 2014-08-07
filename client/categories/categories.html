@@ -4,4 +4,12 @@
 			<smil>Categories</smil>
 		</h1>
 	</div>
+	<ui class="nav navlist">
+		{{#each Categories}}
+		<li class="nav-header">{{name}}</li>
+		{{#each SubCategories}}
+		<li><a href="/{{name}}">{{name}}</a></li>
+		{{/each}}
+		{{/each}}
+	</ui>
 </template>
