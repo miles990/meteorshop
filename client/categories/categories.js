@@ -3,5 +3,5 @@ Template.categories.Categories = function(){
 };
 
 Template.categories.SubCategories = function(){
-	return SubCategories.find();
+	return SubCategories.find({cat:this._id});
 };
