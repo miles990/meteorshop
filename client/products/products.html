@@ -1,16 +1,24 @@
 <template name="products">
 	<div class="page-header">
 		<h1>
-			<span class="label-important label">{{category}}</span><smil>Products</smil>
+			<span class="label-important label">{{category}}</span><small>Products</small>
 		</h1>
-		{{#each productlist}}
-			{{>product}}
-		{{else}}
-			<div class="page-header">
-				<h1>
-					<small>{{#if catnotselected}}Select A Category{{else}}No Products Found{{/if}}</small>
-				</h1>
-			</div>
-		{{/each}}
+	</div>
+	{{#each productlist}}
+		{{>product}}
+	{{else}}
+	<div class="page-header">
+		<h1>
+			<small>{{#if catnotselected}}Select A Category{{else}}No Products Found{{/if}}</small>
+		</h1>			
 	</div>	
+	{{/each}}
+</template>
+<template name="product">
+	<div class="well span3">
+		<ul id="{{_id}}" class="nav nav-list">
+			<li class="thumbnail"><img src="/{{thumb}}"/></li>
+		</ul>
+	</div>
+
 </template>

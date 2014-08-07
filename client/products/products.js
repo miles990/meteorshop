@@ -5,3 +5,7 @@ Template.products.catnotselected = function(){
 Template.products.category = function(){
 	return Session.get('category');
 }
+
+Template.products.productlist = function() {
+	return Products.find({catName:Session.get('category')});
+};

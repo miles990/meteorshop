@@ -1,6 +1,6 @@
 Meteor.startup(function(){
 	if(Products.find().count() === 0){
-		
+		Products.insert({thumb:'applepie.jpeg', name:'Apple Pie', desc:'Decadent Apple Pie', price:2.50, catName:'Fruity'});
 	}
 	if(Categories.find().count() === 0){
 		var hwid = Categories.insert({name:'HARDWARE'});
