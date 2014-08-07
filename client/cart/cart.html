@@ -3,5 +3,23 @@
 		<h1>
 			<small>My Cart</small>
 		</h1>
-	</div>	
+	</div>
+	<table class="span4 table table-striped table-bordered table-hover">
+		<thead>
+			<th>Qty</th>
+			<th>Product</th>
+			<th>Price</th>
+			<th></th>
+		</thead>
+		<tbody>
+			{{#each cartitems}}
+			<tr>
+				<td>{{qty}}</td>
+				<td>{{productname}}</td>
+				<td>{{price}}</td>
+				<td><span class="label-important label removeci">X</span></td>
+			</tr>
+			{{/each}}
+		</tbody>
+	</table>
 </template>
