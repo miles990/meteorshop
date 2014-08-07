@@ -2,15 +2,17 @@
 	{{>navbar}}
 	<div class="container">
 		<div class="row">
-			<div class="span2">
-				<p>Cell 1</p>
+			
+			<div class="span3">
+				{{> yield 'categories'}}
 			</div>
-			<div class="span7">
-				<p>Cell 2</p>
+			<div class="span6">
+				{{> yield 'products'}}
 			</div>
 			<div class="span3">
-				<p>Cell 3</p>
+				{{> yield 'cart'}}
 			</div>
+		
 		</div>		
 	</div>
 </template>
