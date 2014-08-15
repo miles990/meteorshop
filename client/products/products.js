@@ -22,7 +22,7 @@ Template.cart.cartitems = function(){
 		var product = Products.findOne({_id:cartitem.product});
 		cartitem.productname = product.name;
 		cartitem.price = (Number(product.price) * cartitem.qty);
-		totoal += cartitem.price;
+		total += cartitem.price;
 		shopCart.push(cartitem);
 	});
 	shopCart.subtotal = total;
@@ -35,7 +35,7 @@ Template.product.events({
 	'click .addcart': function (evt, tmpl) {
 		var qty = tmpl.find('.prodqty').value;
 		var product = this._id;
-		var sessid = Meteor.defult_connection._lastSessionId;
+		var sessid = Meteor.default_connection._lastSessionId;
 		Meteor.call('addToCart', qty, product, sessid);
 	}
 });
