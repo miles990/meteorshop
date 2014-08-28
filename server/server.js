@@ -27,5 +27,8 @@ Meteor.methods({
 		}else{
 			console.log('Quantity is Zero');
 		}
+	},
+	removeCartItem:function(id){
+		CartItems.remove({_id:id});
 	}
 });

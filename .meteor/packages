@@ -8,4 +8,4 @@ autopublish
 insecure
 bootstrap
 jquery
-iron-router
+cmather:iron-router@0.8.2
